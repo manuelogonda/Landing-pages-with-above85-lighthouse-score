@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym . Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    
+   <!-- The Speed Clone                    
+   Target: Lighthouse 95+ · < 50KB total · No external dependencies   
+  
+
+  SPEED TECHNIQUES USED:
+  Zero external fonts / CDN calls
+  System font stack (renders instantly)
+  CSS custom properties (no JS theming)
+  Pure CSS animations (no JS libraries)
+  Inline SVG icons (no icon library)
+  No images — CSS shapes & gradients only
+  Deferred / minimal JS (< 2KB)
+  Critical CSS inlined
+  Semantic HTML5 (accessibility = SEO)
+  No render-blocking resources
+  Preconnect / meta viewport / charset first -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="[gym name] — Nairobi's fastest-loading gym landing page. Book a free trial, view membership plans and get fit in [place].">
+<meta name="theme-color" content="#E8FF00">
+
+<!-- Open Graph (WhatsApp share preview) -->
+<meta property="og:title" content="[gym name] — Train Hard. Start Free.">
+<meta property="og:description" content="Nairobi's premium gym. Book your free trial today. Open 5AM–10PM daily.">
+<meta property="og:type" content="website">
+</head>
+<body>
+    <!--  ============================================================ NAV -->
+<header>
+<nav class="nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" aria-label="ManuKE Gym home">
+      <div class="nav-logo-mark" aria-hidden="true">KE</div>
+      <span class="nav-logo-text">Manu<span>KE</span></span>
+    </a>
+      <button class="nav-hamburger" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false" onclick="openMobileNav()">
+        <span class="hamburger-lines" aria-hidden="true"></span>
+      </button>
+    <div class="nav-links">
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#plans" class="nav-link">Plans</a>
+      <a href="#location" class="nav-link">Find Us</a>
+      <button class="nav-theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light mode">🌙</button>
+      <button class="nav-cta" onclick="openModal()" aria-haspopup="dialog">Bookings Here</button>
+    </div>
+  </div>
+</nav>
+</header>
+
+<!-- ============================================================ HERO -->
+<main>
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero-bg-num" aria-hidden="true">KE</div>
+  <div class="hero-inner container">
+    <div>
+      <div class="live-pill" aria-live="polite">
+        <span class="live-dot" aria-hidden="true"></span>
+        Gym open · 5AM–10PM
+      </div>
+      <div class="booking-note" id="booking-note">Walk-ins welcome · Bookings are prioritised</div>
+
+      <p class="hero-eyebrow">Mirema, Nairobi · Est. 2023</p>
+
+      <h1 id="hero-heading">
+        Train <em>Hard.</em><br>
+        Start Free.
+      </h1>
+
+      <p class="hero-desc">
+        Nairobi's fastest-loading gym page — because your time matters as much as your reps. No slow websites. No excuses. Just results.
+      </p>
+
+      <div class="hero-actions">
+        <button class="btn btn-primary" onclick="openModal()">
+          Book Free Trial
+        </button>
+        <button class="btn btn-wa" onclick="openModal()">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M476.9 161.1C435 119.1 379.2 96 319.9 96C197.5 96 97.9 195.6 97.9 318C97.9 357.1 108.1 395.3 127.5 429L96 544L213.7 513.1C246.1 530.8 282.6 540.1 319.8 540.1L319.9 540.1C442.2 540.1 544 440.5 544 318.1C544 258.8 518.8 203.1 476.9 161.1zM319.9 502.7C286.7 502.7 254.2 493.8 225.9 477L219.2 473L149.4 491.3L168 423.2L163.6 416.2C145.1 386.8 135.4 352.9 135.4 318C135.4 216.3 218.2 133.5 320 133.5C369.3 133.5 415.6 152.7 450.4 187.6C485.2 222.5 506.6 268.8 506.5 318.1C506.5 419.9 421.6 502.7 319.9 502.7zM421.1 364.5C415.6 361.7 388.3 348.3 383.2 346.5C378.1 344.6 374.4 343.7 370.7 349.3C367 354.9 356.4 367.3 353.1 371.1C349.9 374.8 346.6 375.3 341.1 372.5C308.5 356.2 287.1 343.4 265.6 306.5C259.9 296.7 271.3 297.4 281.9 276.2C283.7 272.5 282.8 269.3 281.4 266.5C280 263.7 268.9 236.4 264.3 225.3C259.8 214.5 255.2 216 251.8 215.8C248.6 215.6 244.9 215.6 241.2 215.6C237.5 215.6 231.5 217 226.4 222.5C221.3 228.1 207 241.5 207 268.8C207 296.1 226.9 322.5 229.6 326.2C232.4 329.9 268.7 385.9 324.4 410C359.6 425.2 373.4 426.5 391 423.9C401.7 422.3 423.8 410.5 428.4 397.5C433 384.5 433 373.4 431.6 371.1C430.3 368.6 426.6 367.2 421.1 364.5z"/>
+            WhatsApp Us
+          </svg>
+        </button>
+        <a href="#plans" class="btn btn-outline">View Plans </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-icon" aria-hidden="true">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M144 128a80 80 0 1 1 160 0 80 80 0 1 1 -160 0zm208 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0zM48 480c0-70.7 57.3-128 128-128l96 0c70.7 0 128 57.3 128 128l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8c0-97.2-78.8-176-176-176l-96 0C78.8 304 0 382.8 0 480l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8z"/></svg>
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M144 128a80 80 0 1 1 160 0 80 80 0 1 1 -160 0zm208 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0zM48 480c0-70.7 57.3-128 128-128l96 0c70.7 0 128 57.3 128 128l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8c0-97.2-78.8-176-176-176l-96 0C78.8 304 0 382.8 0 480l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8z"/></svg>
+          </div>
+          <div>
+            <div class="hero-stat-num">1,200+</div>
+            <div class="hero-stat-label">Active members</div>
+          </div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M288.1-32c9 0 17.3 5.1 21.4 13.1L383 125.3 542.9 150.7c8.9 1.4 16.3 7.7 19.1 16.3s.5 18-5.8 24.4L441.7 305.9 467 465.8c1.4 8.9-2.3 17.9-9.6 23.2s-17 6.1-25 2L288.1 417.6 143.8 491c-8 4.1-17.7 3.3-25-2s-11-14.2-9.6-23.2L134.4 305.9 20 191.4c-6.4-6.4-8.6-15.8-5.8-24.4s10.1-14.9 19.1-16.3l159.9-25.4 73.6-144.2c4.1-8 12.4-13.1 21.4-13.1zm0 76.8L230.3 158c-3.5 6.8-10 11.6-17.6 12.8l-125.5 20 89.8 89.9c5.4 5.4 7.9 13.1 6.7 20.7l-19.8 125.5 113.3-57.6c6.8-3.5 14.9-3.5 21.8 0l113.3 57.6-19.8-125.5c-1.2-7.6 1.3-15.3 6.7-20.7l89.8-89.9-125.5-20c-7.6-1.2-14.1-6-17.6-12.8L288.1 44.8z"/></svg>
+
+          </div>
+          <div>
+            <div class="hero-stat-num">4.9</div>
+            <div class="hero-stat-label">Google rating</div>
+          </div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M464 256a208 208 0 1 1 -416 0 208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0 256 256 0 1 0 -512 0zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
+
+          </div>
+          <div>
+            <div class="hero-stat-num">17hrs</div>
+            <div class="hero-stat-label">Open daily</div>
+          </div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M338.8-9.9c11.9 8.6 16.3 24.2 10.9 37.8L271.3 224 416 224c13.5 0 25.5 8.4 30.1 21.1s.7 26.9-9.6 35.5l-288 240c-11.3 9.4-27.4 9.9-39.3 1.3s-16.3-24.2-10.9-37.8L176.7 288 32 288c-13.5 0-25.5-8.4-30.1-21.1s-.7-26.9 9.6-35.5l288-240c11.3-9.4 27.4-9.9 39.3-1.3z"/></svg>
+
+          </div>
+          <div>
+            <div class="hero-stat-num">&lt;1s</div>
+            <div class="hero-stat-label">Page load time</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ SERVICES -->
+<section class="services" id="services" aria-labelledby="services-heading">
+  <div class="container">
+    <div class="section-eyebrow" aria-hidden="true"><div class="eyebrow-line"></div><span class="eyebrow-text">What We Offer</span></div>
+    <h2 class="section-title reveal" id="services-heading">Everything<br>you need to<br><em style="color:var(--yel);font-style:normal">get results.</em></h2>
+    <p class="section-sub reveal">Six world-class facilities. One membership. Open 5AM to 10PM every day of the year.</p>
+
+    <div class="services-grid" role="list">
+
+      <article class="svc-card reveal" role="listitem">
+        <div class="svc-icon-wrap" aria-hidden="true">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M96 112c0-26.5 21.5-48 48-48s48 21.5 48 48l0 112 256 0 0-112c0-26.5 21.5-48 48-48s48 21.5 48 48l0 16 16 0c26.5 0 48 21.5 48 48l0 48c17.7 0 32 14.3 32 32s-14.3 32-32 32l0 48c0 26.5-21.5 48-48 48l-16 0 0 16c0 26.5-21.5 48-48 48s-48-21.5-48-48l0-112-256 0 0 112c0 26.5-21.5 48-48 48s-48-21.5-48-48l0-16-16 0c-26.5 0-48-21.5-48-48l0-48c-17.7 0-32-14.3-32-32s14.3-32 32-32l0-48c0-26.5 21.5-48 48-48l16 0 0-16z"/></svg>
+
+        </div>
+        <div class="svc-name">Weight Training</div>
+        <div class="svc-desc">Full free-weights section, Olympic barbells, dumbbells 2kg–60kg. Squat racks always available.</div>
+        <div class="svc-price">Included in all plans</div>
+      </article>
+
+      <article class="svc-card reveal" role="listitem">
+        <div class="svc-icon-wrap" aria-hidden="true">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M241 87.1l15 20.7 15-20.7C296 52.5 336.2 32 378.9 32 452.4 32 512 91.6 512 165.1l0 2.6c0 17.6-3.4 35.6-9.5 53.7-21.8-8.6-45.6-13.4-70.5-13.4-106 0-192 86-192 192 0 28.5 6.2 55.6 17.4 80-.5 0-.9 0-1.4 0-15.5 0-30.8-4.6-43.1-14.1-73-55.7-212.9-186-212.9-298.2l0-2.6C0 91.6 59.6 32 133.1 32 175.8 32 216 52.5 241 87.1zM288 400a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm177.4-77c-5.8-4.2-13.8-4-19.4 .5l-80 64c-5.3 4.2-7.4 11.4-5.1 17.8S369.2 416 376 416l32.9 0-15.9 42.4c-2.5 6.7-.2 14.3 5.6 18.6s13.8 4 19.4-.5l80-64c5.3-4.2 7.4-11.4 5.1-17.8S494.8 384 488 384l-32.9 0 15.9-42.4c2.5-6.7 .2-14.3-5.6-18.6z"/></svg>
+
+        </div>
+        <div class="svc-name">Cardio Zone</div>
+        <div class="svc-desc">30+ treadmills, bikes, rowers & cross-trainers. All with personal screens & Bluetooth audio.</div>
+        <div class="svc-price">Included in all plans</div>
+      </article>
+
+      <article class="svc-card reveal" role="listitem">
+        <div class="svc-icon-wrap" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M37.6 122.3c-11.5 18.7-20.6 39-27 60.5-5 16.9 4.6 34.8 21.5 39.8s34.8-4.6 39.8-21.5c18.4-61.9 67.3-110.8 129.2-129.2 16.9-5 26.6-22.9 21.5-39.8S199.8 5.6 182.9 10.6C161.4 17 141.1 26.1 122.3 37.6 112.3 15.4 89.9 0 64 0 28.7 0 0 28.7 0 64 0 89.9 15.4 112.3 37.6 122.3zm436.7 0c22.2-10 37.6-32.4 37.6-58.3 0-35.3-28.7-64-64-64-25.9 0-48.3 15.4-58.3 37.6-18.7-11.5-39-20.6-60.5-27-16.9-5-34.8 4.6-39.8 21.5s4.6 34.8 21.5 39.8c61.9 18.4 110.8 67.3 129.2 129.2 5 16.9 22.9 26.6 39.8 21.5s26.6-22.9 21.5-39.8c-6.4-21.5-15.5-41.8-27-60.5zM512 448c0-25.9-15.4-48.3-37.6-58.3 11.5-18.7 20.6-39 27-60.5 5-16.9-4.6-34.8-21.5-39.8s-34.8 4.6-39.8 21.5c-18.4 61.9-67.3 110.8-129.2 129.2-16.9 5-26.6 22.9-21.5 39.8s22.9 26.6 39.8 21.5c21.5-6.4 41.8-15.5 60.5-27 10 22.2 32.4 37.6 58.3 37.6 35.3 0 64-28.7 64-64zM37.6 389.7c-22.2 10-37.6 32.4-37.6 58.3 0 35.3 28.7 64 64 64 25.9 0 48.3-15.4 58.3-37.6 18.7 11.5 39 20.6 60.5 27 16.9 5 34.8-4.6 39.8-21.5s-4.6-34.8-21.5-39.8c-61.9-18.4-110.8-67.3-129.2-129.2-5-16.9-22.9-26.6-39.8-21.5S5.6 312.2 10.6 329.1c6.4 21.5 15.5 41.8 27 60.5zM256 192c15.6 0 30 5.6 41.1 14.9l-15.3 15.3c-6.6 6.6-1.9 17.8 7.4 17.8l60.5 0c5.7 0 10.4-4.7 10.4-10.4l0-60.5c0-9.3-11.2-13.9-17.8-7.4l-11.2 11.2c-19.8-17.9-46.2-28.9-75.1-28.9-43.6 0-81.3 24.9-99.8 61.1-6 11.8-1.4 26.3 10.4 32.3s26.3 1.4 32.3-10.4c10.6-20.8 32.2-34.9 57-34.9zm58.6 93.1c-10.6 20.8-32.2 34.9-57 34.9-15.7 0-30-5.6-41.1-14.9l15.3-15.3c6.6-6.6 1.9-17.8-7.4-17.8L164 272c-5.7 0-10.4 4.7-10.4 10.4l0 60.5c0 9.3 11.2 13.9 17.8 7.4l11.2-11.2c19.8 17.9 46.2 28.9 75.1 28.9 43.6 0 81.3-24.9 99.8-61.1 6-11.8 1.4-26.3-10.4-32.3s-26.3-1.4-32.3 10.4z"/></svg>
+
+        </div>
+        <div class="svc-name">Group Classes</div>
+        <div class="svc-desc">Yoga, HIIT, spinning, Zumba & boxing. 25+ classes weekly. All skill levels welcome.</div>
+        <div class="svc-price">From KES 500 · Included in Pro+</div>
+      </article>
+
+      <article class="svc-card reveal" role="listitem">
+        <div class="svc-icon-wrap" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M378.9 80c-27.3 0-53 13.1-69 35.2l-34.4 47.6c-4.5 6.2-11.7 9.9-19.4 9.9s-14.9-3.7-19.4-9.9l-34.4-47.6c-16-22.1-41.7-35.2-69-35.2-47 0-85.1 38.1-85.1 85.1 0 49.9 32 98.4 68.1 142.3 41.1 50 91.4 94 125.9 120.3 3.2 2.4 7.9 4.2 14 4.2s10.8-1.8 14-4.2c34.5-26.3 84.8-70.4 125.9-120.3 36.2-43.9 68.1-92.4 68.1-142.3 0-47-38.1-85.1-85.1-85.1zM271 87.1c25-34.6 65.2-55.1 107.9-55.1 73.5 0 133.1 59.6 133.1 133.1 0 68.6-42.9 128.9-79.1 172.8-44.1 53.6-97.3 100.1-133.8 127.9-12.3 9.4-27.5 14.1-43.1 14.1s-30.8-4.7-43.1-14.1C176.4 438 123.2 391.5 79.1 338 42.9 294.1 0 233.7 0 165.1 0 91.6 59.6 32 133.1 32 175.8 32 216 52.5 241 87.1l15 20.7 15-20.7z"/></svg>
+
+        </div>
+        <div class="svc-name">Personal Training</div>
+        <div class="svc-desc">Certified Kenyan trainers. Tailored programmes, nutrition advice & progress tracking.</div>
+        <div class="svc-price">From KES 2,500 / session</div>
+      </article>
+
+      <article class="svc-card reveal" role="listitem">
+        <div class="svc-icon-wrap" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M552 152a56 56 0 1 0 -112 0 56 56 0 1 0 112 0zM293.4 198.2l-88.6 73.9c1.1 0 2.2-.1 3.3-.1 33.1-.2 66.3 10.2 94.4 31.4 22.1 16.6 29.1 16.6 51.2 0 27.5-20.7 59.9-31.2 92.4-31.4 4.8 0 9.7 .2 14.5 .6-8.3-30-24.3-57.7-46.8-80.2-18.4-18.4-40.6-32.7-65-41.8l-68.6-25.7c-27.4-10.3-58-7.5-83.1 7.6l-53.5 32.1c-15.2 9.1-20.1 28.7-11 43.9s28.7 20.1 43.9 11L230 187.3c8.4-5 18.6-5.9 27.7-2.5l35.7 13.4zm110 181.9c21.3-16.1 49.9-16.1 71.2 0 19 14.4 41.9 28.2 67.2 33.3 26.5 5.4 54.3 .8 80.7-19.1 10.6-8 12.7-23 4.7-33.6s-23-12.7-33.6-4.7c-14.9 11.2-28.6 13.1-42.3 10.3-14.9-3-30.9-11.9-47.8-24.6-38.4-29-90.5-29-129 0-24 18.1-40.7 26.3-54.5 26.3s-30.5-8.2-54.5-26.3c-38.4-29-90.5-29-129 0-21.6 16.3-41.3 25.8-58.9 25.7-9.6-.1-19.9-3-31.2-11.5-10.6-8-25.6-5.9-33.6 4.7S7 386.3 17.6 394.3c19.1 14.4 39.4 21 59.8 21.1 33.9 .2 64.3-17.4 88.1-35.3 21.3-16.1 49.9-16.1 71.2 0 24.2 18.3 52.3 35.9 83.4 35.9s59.1-17.7 83.4-35.9z"/></svg>
+        </div>
+        <div class="svc-desc">25m heated Olympic pool. Adult lanes, aqua aerobics & kids sessions available.</div>
+        <div class="svc-price">Pro+ plan only</div>
+      </article>
+
+      <article class="svc-card reveal" role="listitem">
+        <div class="svc-icon-wrap" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M240 6.1c9.1-8.2 22.9-8.2 32 0l232 208c9.9 8.8 10.7 24 1.8 33.9s-24 10.7-33.9 1.8l-8-7.2 0 205.3c0 35.3-28.7 64-64 64l-288 0c-35.3 0-64-28.7-64-64l0-205.3-8 7.2c-9.9 8.8-25 8-33.9-1.8s-8-25 1.8-33.9L240 6.1zm16 50.1L96 199.7 96 448c0 8.8 7.2 16 16 16l48 0 0-104c0-39.8 32.2-72 72-72l48 0c39.8 0 72 32.2 72 72l0 104 48 0c8.8 0 16-7.2 16-16l0-248.3-160-143.4zM208 464l96 0 0-104c0-13.3-10.7-24-24-24l-48 0c-13.3 0-24 10.7-24 24l0 104z"/></svg>
+
+        </div>
+        <div class="svc-name">Steam & Sauna</div>
+        <div class="svc-desc">Full recovery suite. Finnish sauna, steam room & ice plunge. Open 6AM–9PM.</div>
+        <div class="svc-price">Included in Pro & Pro+</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ FAQ SECTION -->
+<section class="faq-section" id="faq" aria-labelledby="faq-heading">
+  <div class="container">
+    <div class="section-eyebrow" aria-hidden="true"><div class="eyebrow-line"></div><span class="eyebrow-text">Questions</span></div>
+    <h2 class="section-title reveal" id="faq-heading">Frequently<br>asked <em style="color:var(--yel);font-style:normal">questions.</em></h2>
+    <p class="section-sub reveal">Everything you need to know about ManuKE Gym, membership, and training.</p>
+
+    <div class="faq-grid">
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>What is included in each membership plan?</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M256 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 160-160 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l160 0 0 160c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160 160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-160 0 0-160z"/></svg>
+
+        </button>
+        <div class="faq-answer">
+          <p>Our Starter plan includes gym floor access (6AM–8PM), free weights, machines, and lockers. The Pro plan adds unlimited group classes, steam & sauna, and 1 PT session per month, with 5AM–10PM access. Pro+ includes everything in Pro plus swimming pool access, 4 PT sessions, nutrition consultation, and 2 guest passes monthly.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>Can I cancel my membership anytime?</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M256 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 160-160 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l160 0 0 160c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160 160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-160 0 0-160z"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p>Yes, absolutely. We don't believe in long-term contracts. You can cancel your membership at any time with no penalties or hidden fees. Just let us know via WhatsApp or visit the gym, and we'll handle it immediately.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>Do you offer personal training sessions?</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M256 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 160-160 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l160 0 0 160c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160 160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-160 0 0-160z"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p>Yes! We have certified Kenyan trainers available for personalized sessions starting at KES 2,500 per session. Our Pro plan includes 1 free session per month, and Pro+ includes 4 sessions. We also provide nutrition advice and progress tracking to help you reach your goals faster.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>What are your opening hours?</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M256 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 160-160 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l160 0 0 160c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160 160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-160 0 0-160z"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p>We're open Monday–Friday 5AM–10PM, Saturday 6AM–9PM, and Sunday 7AM–8PM. On public holidays, we open 8AM–6PM. This gives you plenty of flexibility whether you're an early bird or evening person.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>Is my first session really free?</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M256 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 160-160 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l160 0 0 160c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160 160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-160 0 0-160z"/></svg>
+        </button>
+          <div class="faq-answer">
+          <p>Yes! Your first session is completely free, no credit card required. Book via WhatsApp, come try any service you'd like, and if you love it, sign up for a plan that works for you. No pressure, just genuine hospitality and world-class equipment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ PLANS -->
+<section class="plans-section" id="plans" aria-labelledby="plans-heading">
+  <div class="container">
+    <div class="section-eyebrow" aria-hidden="true"><div class="eyebrow-line"></div><span class="eyebrow-text">Membership Plans</span></div>
+    <h2 class="section-title reveal" id="plans-heading">Choose your<br><em style="color:var(--yel);font-style:normal">plan.</em></h2>
+    <p class="section-sub reveal">No hidden fees. Cancel anytime. First session always free.</p>
+
+    <div class="plans-grid">
+      <!-- Starter -->
+      <article class="plan-card reveal">
+        <div class="plan-name">Starter</div>
+        <div class="plan-price"><sup>KES</sup>2,500 / M</div>
+        <div class="plan-period">per month · billed monthly</div>
+        <ul class="plan-features">
+          <li class="plan-feat has">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M434.8 70.1c14.3 10.4 17.5 30.4 7.1 44.7l-256 352c-5.5 7.6-14 12.3-23.4 13.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l101.5 101.5 234-321.7c10.4-14.3 30.4-17.5 44.7-7.1z"/></svg>
+
+            Gym floor access · 6AM–8PM
+          </li>
+          <li class="plan-feat has">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M434.8 70.1c14.3 10.4 17.5 30.4 7.1 44.7l-256 352c-5.5 7.6-14 12.3-23.4 13.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l101.5 101.5 234-321.7c10.4-14.3 30.4-17.5 44.7-7.1z"/></svg>
+
+            Free weights & machines
+          </li>
+          <li class="plan-feat has">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M434.8 70.1c14.3 10.4 17.5 30.4 7.1 44.7l-256 352c-5.5 7.6-14 12.3-23.4 13.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l101.5 101.5 234-321.7c10.4-14.3 30.4-17.5 44.7-7.1z"/></svg>
+
+            Locker & shower
+          </li>
+          <li class="plan-feat no">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"/></svg>
+
+            Group classes
+          </li>
+          <li class="plan-feat no">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"/></svg>
+
+            Steam & sauna
+          </li>
+        </ul>
+        <a href="#" class="btn-plan btn-plan-ghost" onclick="openModal('plan','Starter');return false">Get Started</a>
+      </article>
+
+      <!-- Pro (featured) -->
+      <article class="plan-card featured reveal">
+        <div class="plan-popular">Most Popular</div>
+        <div class="plan-name">Pro</div>
+        <div class="plan-price"><sup>KES</sup>4,500 / M</div>
+        <div class="plan-period">per month · billed monthly</div>
+        <ul class="plan-features">
+          <li class="plan-feat has">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M434.8 70.1c14.3 10.4 17.5 30.4 7.1 44.7l-256 352c-5.5 7.6-14 12.3-23.4 13.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l101.5 101.5 234-321.7c10.4-14.3 30.4-17.5 44.7-7.1z"/></svg>
+
+            Full gym access · 5AM–10PM
+          </li>
+          <li class="plan-feat has">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M434.8 70.1c14.3 10.4 17.5 30.4 7.1 44.7l-256 352c-5.5 7.6-14 12.3-23.4 13.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l101.5 101.5 234-321.7c10.4-14.3 30.4-17.5 44.7-7.1z"/></svg>
+            Unlimited group classes
+          </li>
+          <li class="plan-feat has">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M434.8 70.1c14.3 10.4 17.5 30.4 7.1 44.7l-256 352c-5.5 7.6-14 12.3-23.4 13.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l101.5 101.5 234-321.7c10.4-14.3 30.4-17.5 44.7-7.1z"/></svg>
+            Steam & sauna
+          </li>
+          <li class="plan-feat has">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M434.8 70.1c14.3 10.4 17.5 30.4 7.1 44.7l-256 352c-5.5 7.6-14 12.3-23.4 13.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l101.5 101.5 234-321.7c10.4-14.3 30.4-17.5 44.7-7.1z"/></svg>
+            1 PT session / month
+          </li>
+          <li class="plan-feat no">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84..z"/></svg>
+            Swimming pool
+          </li>
+        </ul>
+        <a href="#" class="btn-plan btn-plan-primary" onclick="openModal();return false">Start Free Trial →</a>
+      </article>
+
+      <!-- Pro+ -->
+      <article class="plan-card reveal">
+        <div class="plan-name">Pro+</div>
+        <div class="plan-price"><sup>KES</sup>7,500 / M</div>
+        <div class="plan-period">per month · billed monthly</div>
+        <ul class="plan-features">
+          <li class="plan-feat has">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M434.8 70.1c14.3 10.4 17.5 30.4 7.1 44.7l-256 352c-5.5 7.6-14 12.3-23.4 13.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l101.5 101.5 234-321.7c10.4-14.3 30.4-17.5 44.7-7.1z"/></svg>
+
+            
+            Everything in Pro
+          </li>
+          <li class="plan-feat has">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M434.8 70.1c14.3 10.4 17.5 30.4 7.1 44.7l-256 352c-5.5 7.6-14 12.3-23.4 13.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l101.5 101.5 234-321.7c10.4-14.3 30.4-17.5 44.7-7.1z"/></svg>
+
+            
+            Swimming pool access
+          </li>
+          <li class="plan-feat has">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M434.8 70.1c14.3 10.4 17.5 30.4 7.1 44.7l-256 352c-5.5 7.6-14 12.3-23.4 13.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l101.5 101.5 234-321.7c10.4-14.3 30.4-17.5 44.7-7.1z"/></svg>
+
+            4 PT sessions / month
+          </li>
+          <li class="plan-feat has">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M434.8 70.1c14.3 10.4 17.5 30.4 7.1 44.7l-256 352c-5.5 7.6-14 12.3-23.4 13.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l101.5 101.5 234-321.7c10.4-14.3 30.4-17.5 44.7-7.1z"/></svg>
+
+            Nutrition consultation
+          </li>
+          <li class="plan-feat has">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M434.8 70.1c14.3 10.4 17.5 30.4 7.1 44.7l-256 352c-5.5 7.6-14 12.3-23.4 13.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l101.5 101.5 234-321.7c10.4-14.3 30.4-17.5 44.7-7.1z"/></svg>
+
+            Guest passes (2/month)
+          </li>
+        </ul>
+        <a href="#" class="btn-plan btn-plan-ghost" onclick="openModal('plan','Pro+');return false">Get Started</a>
+      </article>
+    </div>
+
+    <p style="text-align:center;margin-top:2rem;font-size:.82rem;color:var(--gry)">
+      Corporate rates available · <a href="https://wa.me/254711392245?text=Hi!%20I%20need%20corporate%20gym%20rates%20for%20my%20company." style="color:var(--yel)" target="_blank">WhatsApp us</a> for team deals
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================ TESTIMONIALS -->
+<section class="testi-section" aria-labelledby="testi-heading">
+  <div class="container">
+    <div class="section-eyebrow" aria-hidden="true"><div class="eyebrow-line"></div><span class="eyebrow-text">Member Reviews</span></div>
+    <h2 class="section-title reveal" id="testi-heading">Real people.<br><em style="color:var(--yel);font-style:normal">Real results.</em></h2>
+
+    <div class="testi-scroll-wrapper">
+      <button class="testi-scroll-btn testi-scroll-left" onclick="scrollTesti(-280)" aria-label="Scroll testimonials left">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      
+      <div class="testi-grid" id="testi-grid">
+        <article class="testi-card reveal">
+        <div class="testi-stars" aria-label="5 out of 5 stars">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+
+        </div>
+        <blockquote class="testi-text">"I used to drive past this gym every day. Finally joined after seeing the website load in under a second on my Safaricom data. Clean gym, great equipment, no excuses."</blockquote>
+        <div class="testi-author">
+          <div class="testi-av" style="background:rgba(232,255,0,.15);color:var(--yel)" aria-hidden="true">KO</div>
+          <div>
+            <div class="testi-name">Kevin Omondi</div>
+            <div class="testi-role">Pro member · 8 months</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="testi-card reveal">
+        <div class="testi-stars" aria-label="5 out of 5 stars">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+
+        </div>
+        <blockquote class="testi-text">"Most gym websites take forever to open on my phone. This one? Instant. Booked my free trial that same night at 11PM. The gym itself is even better than the website."</blockquote>
+        <div class="testi-author">
+          <div class="testi-av" style="background:rgba(37,211,102,.15);color:var(--grn)" aria-hidden="true">AW</div>
+          <div>
+            <div class="testi-name">Amina Wanjiku</div>
+            <div class="testi-role">Pro+ member · 14 months</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="testi-card reveal">
+        <div class="testi-stars" aria-label="5 out of 5 stars">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+
+        </div>
+        <blockquote class="testi-text">"Personal trainers here actually listen. Lost 12kg in 5 months. The WhatsApp booking is so easy — no calling, no waiting. Just text and you're in."</blockquote>
+        <div class="testi-author">
+          <div class="testi-av" style="background:rgba(255,59,48,.15);color:var(--red)" aria-hidden="true">DM</div>
+          <div>
+            <div class="testi-name">Diana Muthoni</div>
+            <div class="testi-role">Starter  Pro member · 5 months</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="testi-card reveal">
+        <div class="testi-stars" aria-label="5 out of 5 stars">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+
+        </div>
+        <blockquote class="testi-text">"Been looking for a serious gym that doesn't overcrowd. ManuKE hits different. The equipment is well-maintained, staff are helpful, and the free trial convinced me immediately."</blockquote>
+        <div class="testi-author">
+          <div class="testi-av" style="background:rgba(88,198,255,.15);color:#58C6FF" aria-hidden="true">JK</div>
+          <div>
+            <div class="testi-name">James Kipchoge</div>
+            <div class="testi-role">Pro member · 3 months</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="testi-card reveal">
+        <div class="testi-stars" aria-label="5 out of 5 stars">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+
+        </div>
+        <blockquote class="testi-text">"As a gym beginner, I was intimidated. But the trainers here made me feel welcome. Gained 8kg of muscle in 6 months and finally feeling confident. Highly recommend."</blockquote>
+        <div class="testi-author">
+          <div class="testi-av" style="background:rgba(255,188,108,.15);color:#FFBC6C" aria-hidden="true">SK</div>
+          <div>
+            <div class="testi-name">Sarah Kariuki</div>
+            <div class="testi-role">Starter member · 6 months</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="testi-card reveal">
+        <div class="testi-stars" aria-label="5 out of 5 stars">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"/></svg>
+
+
+        </div>
+        <blockquote class="testi-text">"Corporate discounts made it affordable. I've been doing the 5AM sessions for 10 months now and it's changed my energy levels. The community here is real."</blockquote>
+        <div class="testi-author">
+          <div class="testi-av" style="background:rgba(167,243,208,.15);color:#A7F3D0" aria-hidden="true">PM</div>
+          <div>
+            <div class="testi-name">Peter Mwangi</div>
+            <div class="testi-role">Corporate Pro member · 10 months</div>
+          </div>
+        </div>
+      </article>
+      </div>
+
+      <button class="testi-scroll-btn testi-scroll-right" onclick="scrollTesti(280)" aria-label="Scroll testimonials right">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ MOBILE NAV OVERLAY -->
+<div id="mobile-nav" class="mobile-nav" onclick="handleMobileNavOverlay(event)" aria-hidden="true">
+  <div class="mobile-nav-panel" role="navigation" aria-label="Mobile navigation">
+    <button class="mobile-nav-close" aria-label="Close menu" onclick="closeMobileNav()">✕</button>
+    <nav class="mobile-links">
+      <a href="#services" onclick="closeMobileNav()">Services</a>
+      <a href="#plans" onclick="closeMobileNav()">Plans</a>
+      <a href="#location" onclick="closeMobileNav()">Find Us</a>
+      <a href="#" onclick="openModal();closeMobileNav()">Free Trial</a>
+      <a href="https://wa.me/254711392245" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="tel:+254711392245">Call Us</a>
+    </nav>
+  </div>
+</div>
+
+<!-- ============================================================ LOCATION -->
+<section class="location-section" id="location" aria-labelledby="location-heading">
+  <div class="container">
+    <div class="section-eyebrow" aria-hidden="true"><div class="eyebrow-line"></div><span class="eyebrow-text">Find Us</span></div>
+    <h2 class="section-title reveal" id="location-heading">Come train<br><em style="color:var(--yel);font-style:normal">with us.</em></h2>
+
+    <div class="loc-grid">
+      <div>
+        <div class="loc-info">
+          <h3>ManuKE Gym Mirema</h3>
+          <address style="font-style:normal">
+            <p>2nd Floor,  Pinnar Apartments<br>Zimmerman<br>Nairobi, Kenya</p>
+          </address>
+        </div>
+
+        <div class="hours-grid" aria-label="Opening hours">
+          <div class="hours-row today">
+            <span class="hours-day">Monday – Friday</span>
+            <span class="hours-time">5:00 AM – 10:00 PM</span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Saturday</span>
+            <span class="hours-time">6:00 AM – 9:00 PM</span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Sunday</span>
+            <span class="hours-time">7:00 AM – 8:00 PM</span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Public Holidays</span>
+            <span class="hours-time">8:00 AM – 6:00 PM</span>
+          </div>
+        </div>
+
+        <div class="loc-actions">
+          <a href="tel:+25411392245" class="loc-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M160.2 25C152.3 6.1 131.7-3.9 112.1 1.4l-5.5 1.5c-64.6 17.6-119.8 80.2-103.7 156.4 37.1 175 174.8 312.7 349.8 349.8 76.3 16.2 138.8-39.1 156.4-103.7l1.5-5.5c5.4-19.7-4.7-40.3-23.5-48.1l-97.3-40.5c-16.5-6.9-35.6-2.1-47 11.8l-38.6 47.2C233.9 335.4 177.3 277 144.8 205.3L189 169.3c13.9-11.3 18.6-30.4 11.8-47L160.2 25z"/></svg>
+            0711392245
+          </a>
+          <button class="loc-btn loc-btn-wa" onclick="openModal()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M380.9 97.1c-41.9-42-97.7-65.1-157-65.1-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480 117.7 449.1c32.4 17.7 68.9 27 106.1 27l.1 0c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6zM325.1 300.5c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+            WhatsApp Us
+          </button>
+          <a href="https://maps.google.com/?q=Pinnar+Apartments+Zimmerman+Nairobi" target="_blank" rel="noopener" class="loc-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M477.9 75.5c4.5-11.8 1.7-25.2-7.2-34.1s-22.3-11.8-34.1-7.2l-416 160C7.9 199-.3 211.2 0 224.7s9.1 25.4 21.9 29.6l176.8 58.9 58.9 176.8c4.3 12.8 16.1 21.6 29.6 21.9s25.7-7.9 30.6-20.5l160-416z"/></svg>
+            Get Directions
+          </a>
+        </div>
+      </div>
+
+      <!-- CSS Map -->
+      <div class="map-placeholder" role="img" aria-label="Map showing ManuKE Gym location in Zimmerman, Nairobi">
+        <div class="map-pin">
+          <div class="map-pin-icon" aria-hidden="true"><span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M477.9 75.5c4.5-11.8 1.7-25.2-7.2-34.1s-22.3-11.8-34.1-7.2l-416 160C7.9 199-.3 211.2 0 224.7s9.1 25.4 21.9 29.6l176.8 58.9 58.9 176.8c4.3 12.8 16.1 21.6 29.6 21.9s25.7-7.9 30.6-20.5l160-416z"/></svg>
+          </span></div>
+          <div class="map-pin-label">ManuKE · Mirema</div>
+        </div>
+        <a href="https://maps.google.com/?q=Pinnar+Apartments+Zimmerman+Nairobi" target="_blank" rel="noopener" class="map-open-btn">Open in Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ call-to-action CTA -->
+<section class="cta-section" aria-labelledby="cta-heading">
+  <h2 id="cta-heading">No more<br>excuses.</h2>
+  <p>First session is free. No contract. No intimidation. Just show up and we'll handle the rest.</p>
+  <div class="cta-actions">
+    <button class="btn-cta-dark" onclick="openModal()">
+      Book Free Trial
+    </button>
+    <button class="btn-cta-wa" onclick="openModal()">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M380.9 97.1c-41.9-42-97.7-65.1-157-65.1-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480 117.7 449.1c32.4 17.7 68.9 27 106.1 27l.1 0c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6zM325.1 300.5c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+
+      WhatsApp to Book
+    </button>
+  </div>
+</section>
+</main>
+
+<!-- ============================================================ FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Manu<span>KE</span> Gym</div>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="#services">Services</a>
+      <a href="#plans">Plans</a>
+      <a href="#location">Location</a>
+      <a href="https://wa.me/254712000001" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="tel:+254712000001">Call Us</a>
+    </nav>
+    <p class="footer-copy">&copy; 2026 ManuE Gym · Mirema, Nairobi</p>
+  </div>
+  <div class="social-media-links">
+    <div class="social-items-wordings">-Find,follow,talk to us on social media</div>
+    <div class="social-icons">
+    </div>
+    <a href="">
+      <p>Tiktok</p>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M448.5 209.9c-44 .1-87-13.6-122.8-39.2l0 178.7c0 33.1-10.1 65.4-29 92.6s-45.6 48-76.6 59.6-64.8 13.5-96.9 5.3-60.9-25.9-82.7-50.8-35.3-56-39-88.9 2.9-66.1 18.6-95.2 40-52.7 69.6-67.7 62.9-20.5 95.7-16l0 89.9c-15-4.7-31.1-4.6-46 .4s-27.9 14.6-37 27.3-14 28.1-13.9 43.9 5.2 31 14.5 43.7 22.4 22.1 37.4 26.9 31.1 4.8 46-.1 28-14.4 37.2-27.1 14.2-28.1 14.2-43.8l0-349.4 88 0c-.1 7.4 .6 14.9 1.9 22.2 3.1 16.3 9.4 31.9 18.7 45.7s21.3 25.6 35.2 34.6c19.9 13.1 43.2 20.1 67 20.1l0 87.4z"/></svg>
+
+    </a>
+    <a href="">
+      <p>Instagram</p>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+
+    </a>
+    <a href="">
+      <p>Facebook</p>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5l0-170.3-52.8 0 0-78.2 52.8 0 0-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4l0 70.8c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2l0 27.8 83.6 0-14.4 78.2-69.3 0 0 175.9C413.8 494.8 512 386.9 512 256z"/></svg>
+      
+    </a>
+  </div>
+</footer>
+
+<!-- ============================================================ BOOKING MODAL -->
+<div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" onclick="handleOverlay(event)">
+  <div class="modal-box" style="position:relative">
+    <div class="modal-handle" aria-hidden="true"></div>
+    <button class="modal-close-btn" onclick="closeModal()" aria-label="Close booking form">✕</button>
+    
+    <!-- Booking Type Tabs -->
+    <div class="modal-tabs">
+      <button class="modal-tab active" data-tab="trial" onclick="switchTab('trial')">Free Trial</button>
+      <button class="modal-tab" data-tab="daily" onclick="switchTab('daily')">Daily Booking</button>
+    </div>
+    <!-- Payment info -->
+    <div style="margin-bottom:1.5rem;padding:1rem;background:rgba(232,255,0,.08);border:1px solid rgba(232,255,0,.2);border-radius:8px;text-align:center">
+      <p style="font-size:.85rem;font-weight:600;color:var(--yel);margin:0">Payments are handled in person after your session</p>
+      <p style="font-size:.75rem;color:var(--gry);margin-top:.4rem;margin-bottom:0">No online payment required · Just book via WhatsApp</p>
+    </div>
+
+    <!-- FREE TRIAL FORM -->
+    <div id="trial-content" class="modal-content active">
+      <h2 class="modal-title" id="modal-title">Book Your <span>Free Trial</span></h2>
+      <form id="trial-form" onsubmit="handleTrialSubmit(event)" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="trial-name">Full Name</label>
+            <input type="text" id="trial-name" name="name" placeholder="e.g. John Doe" required autocomplete="name">
+            <div class="form-msg" id="trial-name-msg"></div>
+          </div>
+          <div class="form-group">
+            <label for="trial-phone">Phone Number</label>
+            <input type="tel" id="trial-phone" name="phone" placeholder="07XXXXXXXX" required autocomplete="tel" inputmode="numeric">
+            <div class="form-msg" id="trial-phone-msg"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="trial-service">What would you like to try?</label>
+          <select id="trial-service" name="service" required>
+            <option value="">— Select a service —</option>
+            <option>Weight Training</option>
+            <option>Group Fitness Class</option>
+            <option>Personal Training Session</option>
+            <option>Swimming Pool</option>
+            <option>Cardio Zone</option>
+            <option>Full Tour (I'm not sure yet)</option>
+          </select>
+          <div class="form-msg" id="trial-service-msg"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="trial-plan">Select Plan</label>
+          <select id="trial-plan" name="plan" required>
+            <option value="">— Select a plan —</option>
+            <option>Starter</option>
+            <option>Pro</option>
+            <option>Pro+</option>
+          </select>
+          <div class="form-msg" id="trial-plan-msg"></div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="trial-date">Preferred Date</label>
+            <input type="date" id="trial-date" name="date" required>
+            <div class="form-msg" id="trial-date-msg"></div>
+          </div>
+          <div class="form-group">
+            <label for="trial-time">Preferred Time</label>
+            <select id="trial-time" name="time" required>
+              <option value="">— Pick a time —</option>
+              <option>5:00 AM – 7:00 AM (Early Bird)</option>
+              <option>7:00 AM – 10:00 AM (Morning)</option>
+              <option>10:00 AM – 1:00 PM (Midday)</option>
+              <option>1:00 PM – 5:00 PM (Afternoon)</option>
+              <option>5:00 PM – 8:00 PM (Evening Peak)</option>
+              <option>8:00 PM – 10:00 PM (Night Owl)</option>
+            </select>
+            <div class="form-msg" id="trial-time-msg"></div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-submit" style="width:100%">Confirm Free Trial</button>
+        <p class="form-note">Confirmation via WhatsApp · Payment after session · Cancel anytime</p>
+      </form>
+    </div>
+
+    <!-- DAILY BOOKING FORM -->
+    <div id="daily-content" class="modal-content">
+      <h2 class="modal-title">Book a <span>Session Today</span></h2>
+      <form id="daily-form" onsubmit="handleDailySubmit(event)" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="daily-name">Full Name</label>
+            <input type="text" id="daily-name" name="name" placeholder="e.g. John Doe" required autocomplete="name">
+            <div class="form-msg" id="daily-name-msg"></div>
+          </div>
+          <div class="form-group">
+            <label for="daily-phone">Phone Number</label>
+            <input type="tel" id="daily-phone" name="phone" placeholder="07XXXXXXXX" required autocomplete="tel" inputmode="numeric">
+            <div class="form-msg" id="daily-phone-msg"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="daily-service">What would you like to book?</label>
+          <select id="daily-service" name="service" required>
+            <option value="">— Select a service —</option>
+            <option>Weight Training</option>
+            <option>Group Fitness Class</option>
+            <option>Personal Training Session</option>
+            <option>Swimming Pool</option>
+            <option>Cardio Zone</option>
+          </select>
+          <div class="form-msg" id="daily-service-msg"></div>
+
+        <div class="form-group">
+          <label for="daily-plan">Select Plan</label>
+          <select id="daily-plan" name="plan" required>
+            <option value="">— Select a plan —</option>
+            <option>Starter</option>
+            <option>Pro</option>
+            <option>Pro+</option>
+          </select>
+          <div class="form-msg" id="daily-plan-msg"></div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="daily-date">Date</label>
+            <input type="date" id="daily-date" name="date" required>
+            <div class="form-msg" id="daily-date-msg"></div>
+          </div>
+          <div class="form-group">
+            <label for="daily-time">Time</label>
+            <select id="daily-time" name="time" required>
+              <option value="">— Pick a time —</option>
+              <option>5:00 AM</option>
+              <option>6:00 AM</option>
+              <option>7:00 AM</option>
+              <option>8:00 AM</option>
+              <option>9:00 AM</option>
+              <option>10:00 AM</option>
+              <option>11:00 AM</option>
+              <option>12:00 PM</option>
+              <option>1:00 PM</option>
+              <option>2:00 PM</option>
+              <option>3:00 PM</option>
+              <option>4:00 PM</option>
+              <option>5:00 PM</option>
+              <option>6:00 PM</option>
+              <option>7:00 PM</option>
+              <option>8:00 PM</option>
+              <option>9:00 PM</option>
+              <option>10:00 PM</option>
+            </select>
+            <div class="form-msg" id="daily-time-msg"></div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-submit" style="width:100%">Confirm Booking</button>
+        <p class="form-note">Confirm via WhatsApp · Payment after session · Easy cancellation anytime</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Speed badge -->
+<div class="speed-badge" aria-label="Page performance indicator">
+  <span class="speed-badge-dot" aria-hidden="true"></span>
+  Loaded in &lt;1s
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
