@@ -22,7 +22,7 @@ define('MPESA_CONSUMER_SECRET', 'YOUR_CONSUMER_SECRET_HERE');
 define('MPESA_BUSINESS_SHORTCODE', 'YOUR_SHORTCODE_HERE'); // e.g., 174379
 define('MPESA_PASSKEY', 'bfb279f9aa9bdbcf158e97dd71a467cd'); // Default test passkey
 define('MPESA_ENVIRONMENT', 'sandbox'); // Change to 'production' for live
-define('MPESA_CALLBACK_URL', 'https://yoursite.com/backend/mpesa_callback.php');
+define('MPESA_CALLBACK_URL', 'https://yoursite.com/BeautyShop/backend/api/callback');
 
 // ==========================================
 // BUSINESS CONFIGURATION

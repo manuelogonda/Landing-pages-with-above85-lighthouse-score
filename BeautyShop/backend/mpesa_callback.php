@@ -9,8 +9,12 @@ require_once 'config.php';
 require_once 'mpesa_api.php';
 
 // Log all callback requests for debugging
+$logDir = __DIR__ . '/logs';
+if (!is_dir($logDir)) {
+    mkdir($logDir, 0755, true);
+}
 file_put_contents(
-    __DIR__ . '/logs/mpesa_callbacks.log',
+    $logDir . '/mpesa_callbacks.log',
     date('Y-m-d H:i:s') . " - Callback received\n" .
     json_encode($_POST, JSON_PRETTY_PRINT) . "\n" .
     str_repeat("=", 50) . "\n",
