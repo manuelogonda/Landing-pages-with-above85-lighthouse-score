@@ -186,7 +186,8 @@ function handleCreateBooking() {
             $stk_result = $mpesa->initiateStkPush(
                 $mpesa_phone,
                 $amount,
-                $booking_id
+                $booking_id,
+                "Payment for $service_name booking"
             );
 
             if (!$stk_result['success']) {
