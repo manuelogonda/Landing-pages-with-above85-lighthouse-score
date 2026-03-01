@@ -1,0 +1,202 @@
+# 🚀 QUICK REFERENCE CARD
+
+## 5-Minute Setup
+
+```bash
+# 1. Get M-Pesa credentials (15 min)
+https://developer.safaricom.co.ke/
+→ Create app → Copy keys
+
+# 2. Update config
+Edit: backend/config.php
+Lines: 11-14
+→ Paste M-Pesa credentials
+
+# 3. Create database
+mysql -u root -p < backend/database.sql
+
+# 4. Test without M-Pesa
+Open: backend/demo.php
+→ Create booking → Confirm payment
+
+# 5. Deploy
+Upload all files to web server
+Set callback URL in Safaricom portal
+Done! 🎉
+```
+
+---
+
+## File Locations
+
+| What | Where |
+|------|-------|
+| Booking Form | `index.html` (lines 200-270) |
+| Payment Modal | `index.html` (lines 273-360) |
+| Styles | `style.css` (entire file) |
+| JavaScript | `script.js` (entire file) |
+| M-Pesa Config | `backend/config.php` (lines 11-14) |
+| Database | `backend/database.sql` |
+| Testing | `backend/demo.php` |
+
+---
+
+## Key Phone: 254712000003
+
+Use this number for:
+- Business WhatsApp reply
+- M-Pesa test phone
+- Booking SMS replies
+- Admin notifications
+
+---
+
+## User Story
+
+```
+Customer → Clicks "Book" → Fills Form → Enters M-Pesa
+→ STK Pops Up on Phone → Enters PIN → Payment Done
+→ Success Modal → Opens WhatsApp → Sends Booking
+```
+
+**Total time:** ~3 minutes
+
+---
+
+## Password for Testing
+
+```
+Username: admin@luminebeauty.ke
+Password: Admin@123  (CHANGE THIS!)
+```
+
+---
+
+## Logs Location
+
+```
+Activity Log: backend/logs/activity.log
+M-Pesa Callbacks: backend/logs/mpesa_callbacks.log
+PHP Errors: System error_log
+```
+
+---
+
+## Database Tables
+
+```sql
+bookings        - Main booking records
+payments        - M-Pesa transactions
+services        - Service reference
+activity_log    - Audit trail
+admins          - Admin users
+```
+
+---
+
+## M-Pesa Test Numbers
+
+```
+Sandbox:    254708374149
+Demo:       254712000003
+Production: Real numbers only
+```
+
+---
+
+## Documentation
+
+| Document | Purpose |
+|----------|---------|
+| README.md | Quick start |
+| SETUP_GUIDE.md | Full instructions |
+| BOOKING_SYSTEM_COMPLETE.md | System overview |
+| This card | Quick reference |
+
+---
+
+## Essential URLs
+
+```
+Website:           /index.html
+Testing:           /backend/demo.php
+View Bookings:     /backend/get_bookings.php
+Callback Webhook:  /backend/mpesa_callback.php
+```
+
+---
+
+## Critical Credentials
+
+```
+In backend/config.php:
+- MPESA_CONSUMER_KEY
+- MPESA_CONSUMER_SECRET
+- MPESA_BUSINESS_SHORTCODE
+- DB_PASSWORD
+- PASSWORD_SALT
+```
+
+**Store securely. Never commit to Git!**
+
+---
+
+## Commands to Remember
+
+```bash
+# View all bookings
+mysql: SELECT * FROM bookings;
+
+# Reset booking status
+mysql: UPDATE bookings SET status='pending';
+
+# Clear logs
+rm backend/logs/*.log
+
+# Test API
+curl http://localhost/backend/get_bookings.php
+
+# Check database
+mysql -u root -p luminebeauty
+```
+
+---
+
+## Troubleshooting Quick Links
+
+```
+Database error? → See SETUP_GUIDE.md § Database
+M-Pesa error?  → See SETUP_GUIDE.md § M-Pesa
+Form error?    → Check script.js validation
+Phone format?  → Must be 254XXXXXXXXX
+```
+
+---
+
+## Button Labels
+
+```
+"Book an Appointment"     → Opens booking modal
+"Continue to Payment"     → Opens payment modal
+"Pay with M-Pesa"        → Initiates STK push
+"Open WhatsApp"          → Prefilled message
+"Confirm Payment"        → Demo mode only
+```
+
+---
+
+## Support Contacts
+
+```
+Safaricom Daraja:  https://developer.safaricom.co.ke/support
+MySQL Help:        https://dev.mysql.com/doc/
+PHP Help:          https://www.php.net/manual/
+```
+
+---
+
+**Luminé Beauty Shop - Complete Booking System**  
+**v1.0 - March 2025**  
+**Status: PRODUCTION READY** ✅
+
+Print this card and keep it handy! 📌
