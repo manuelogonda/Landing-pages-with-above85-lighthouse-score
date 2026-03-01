@@ -334,6 +334,39 @@ body.light-mode .section-title{
 body.light-mode .section-sub{
   color:rgba(15,15,15,.68);
 }
+.section-em{color:var(--yel);font-style:normal}
+
+/* ============================================================ GALLERY */
+.gallery-section{background:var(--blk)}
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:1rem;
+  margin-top:2.5rem;
+}
+.gallery-card{
+  border:1px solid var(--brd);
+  border-radius:12px;
+  overflow:hidden;
+  background:var(--blk3);
+}
+.gallery-card img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+  display:block;
+}
+.gallery-card figcaption{
+  padding:.75rem .95rem;
+  font-size:.74rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--gry);
+}
+body.light-mode .gallery-card{
+  border-color:rgba(0,0,0,.15);
+  background:#FFFFFF;
+}
 
 /* ============================================================ SERVICES */
 .services{background:var(--blk2)}

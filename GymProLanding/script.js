@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 
 // ---- Theme Toggle ----
 function toggleTheme() {
@@ -11,7 +11,7 @@ function toggleTheme() {
 function updateThemeToggleIcon() {
   const btn = document.getElementById('theme-toggle');
   const isDark = !document.body.classList.contains('light-mode');
-  btn.textContent = isDark ? 'Dark Mode' : 'Light Mode';
+  btn.textContent = isDark ? '🌙' : '☀️';
 }
 
 // Load saved theme on page load
@@ -311,7 +311,7 @@ function sendTrialToWhatsApp(name, phone, service, plan, date, time) {
     '_Booked via ManuKE website_'
   ].join('\n');
 
-  const waUrl = `https://wa.me/25411392245?text=${encodeURIComponent(msg)}`;
+  const waUrl = `https://wa.me/254711392245?text=${encodeURIComponent(msg)}`;
   closeModal();
   window.open(waUrl, '_blank', 'noopener');
 }
@@ -373,32 +373,22 @@ function updateOpenStatus() {
   const now = new Date();
   const h = now.getHours();
   const livePill = document.querySelector('.live-pill');
-  const liveText = document.querySelector('.live-pill');
+  const liveStatusText = document.querySelector('.live-status-text');
   const bookingNote = document.getElementById('booking-note');
   if (!livePill) return;
 
-  // Open hours: 8:00 (inclusive) to 22:00 (exclusive)
-  const isOpen = (h >= 8 && h < 22);
+  // Open hours: 5:00 (inclusive) to 22:00 (exclusive)
+  const isOpen = (h >= 5 && h < 22);
   if (isOpen) {
     livePill.classList.remove('closed');
     livePill.classList.add('open');
-    if (livePill.querySelector('span')) {
-      const dot = livePill.querySelector('.live-dot');
-      if (dot) {
-        dot.nextSibling && (dot.nextSibling.textContent = ' Gym open · 8AM–10PM');
-      }
-    }
-    if (bookingNote) bookingNote.textContent = 'Walk-ins welcome · Bookings are prioritised';
+    if (liveStatusText) liveStatusText.textContent = 'Gym open - 5AM-10PM';
+    if (bookingNote) bookingNote.textContent = 'Walk-ins welcome - bookings are prioritized';
   } else {
     livePill.classList.remove('open');
     livePill.classList.add('closed');
-    if (livePill.querySelector('span')) {
-      const dot = livePill.querySelector('.live-dot');
-      if (dot) {
-        dot.nextSibling && (dot.nextSibling.textContent = ' Closed — Bookings prioritised; walk-ins welcome when space');
-      }
-    }
-    if (bookingNote) bookingNote.textContent = 'Walk-ins welcome but bookings are prioritised — please book in advance when possible.';
+    if (liveStatusText) liveStatusText.textContent = 'Closed - bookings prioritized';
+    if (bookingNote) bookingNote.textContent = 'Walk-ins welcome, but book ahead for preferred slots.';
   }
 }
 
@@ -413,3 +403,5 @@ function scrollTesti(amount) {
     grid.scrollBy({left: amount, behavior: 'smooth'});
   }
 }
+
+

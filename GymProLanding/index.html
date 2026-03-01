@@ -1,36 +1,16 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gym . Landing Page</title>
     <link rel="stylesheet" href="style.css">
-    
-   <!-- The Speed Clone                    
-   Target: Lighthouse 95+ · < 50KB total · No external dependencies   
-  
-
-  SPEED TECHNIQUES USED:
-  Zero external fonts / CDN calls
-  System font stack (renders instantly)
-  CSS custom properties (no JS theming)
-  Pure CSS animations (no JS libraries)
-  Inline SVG icons (no icon library)
-  No images — CSS shapes & gradients only
-  Deferred / minimal JS (< 2KB)
-  Critical CSS inlined
-  Semantic HTML5 (accessibility = SEO)
-  No render-blocking resources
-  Preconnect / meta viewport / charset first -->
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="[gym name] — Nairobi's fastest-loading gym landing page. Book a free trial, view membership plans and get fit in [place].">
+<meta name="description" content="ManuKE Gym - Nairobi gym with fast booking, classes, and personal training.">
 <meta name="theme-color" content="#E8FF00">
 
 <!-- Open Graph (WhatsApp share preview) -->
-<meta property="og:title" content="[gym name] — Train Hard. Start Free.">
-<meta property="og:description" content="Nairobi's premium gym. Book your free trial today. Open 5AM–10PM daily.">
+<meta property="og:title" content="ManuKE Gym - Train Hard. Start Free.">
+<meta property="og:description" content="Nairobi's premium gym. Book your free trial today. Open 5AM-10PM daily.">
 <meta property="og:type" content="website">
 </head>
 <body>
@@ -64,9 +44,9 @@
     <div>
       <div class="live-pill" aria-live="polite">
         <span class="live-dot" aria-hidden="true"></span>
-        Gym open · 5AM–10PM
+        <span class="live-status-text">Gym open - 5AM-10PM</span>
       </div>
-      <div class="booking-note" id="booking-note">Walk-ins welcome · Bookings are prioritised</div>
+      <div class="booking-note" id="booking-note">Walk-ins welcome - bookings are prioritized</div>
 
       <p class="hero-eyebrow">Mirema, Nairobi · Est. 2023</p>
 
@@ -138,6 +118,28 @@
   </div>
 </section>
 
+<!-- ============================================================ GALLERY -->
+<section class="gallery-section" aria-labelledby="gallery-heading">
+  <div class="container">
+    <div class="section-eyebrow" aria-hidden="true"><div class="eyebrow-line"></div><span class="eyebrow-text">Inside ManuKE</span></div>
+    <h2 class="section-title reveal" id="gallery-heading">The space you<br><em class="section-em">train in.</em></h2>
+    <p class="section-sub reveal">A quick look at our floor, classes, and training environment in Mirema.</p>
+    <div class="gallery-grid">
+      <figure class="gallery-card reveal">
+        <img src="alina-chernysheva-JA2S6sJWleg-unsplash.jpg" alt="Gym members training with dumbbells" loading="lazy">
+        <figcaption>Strength floor</figcaption>
+      </figure>
+      <figure class="gallery-card reveal">
+        <img src="anastase-maragos-9dzWZQWZMdE-unsplash.jpg" alt="Athlete using battle ropes in a workout session" loading="lazy">
+        <figcaption>Functional training</figcaption>
+      </figure>
+      <figure class="gallery-card reveal">
+        <img src="florian-kurrasch-HyivyCRdz14-unsplash.jpg" alt="Well-lit workout area with training equipment" loading="lazy">
+        <figcaption>Modern equipment</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 <!-- ============================================================ SERVICES -->
 <section class="services" id="services" aria-labelledby="services-heading">
   <div class="container">
@@ -191,6 +193,8 @@
         <div class="svc-icon-wrap" aria-hidden="true">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M552 152a56 56 0 1 0 -112 0 56 56 0 1 0 112 0zM293.4 198.2l-88.6 73.9c1.1 0 2.2-.1 3.3-.1 33.1-.2 66.3 10.2 94.4 31.4 22.1 16.6 29.1 16.6 51.2 0 27.5-20.7 59.9-31.2 92.4-31.4 4.8 0 9.7 .2 14.5 .6-8.3-30-24.3-57.7-46.8-80.2-18.4-18.4-40.6-32.7-65-41.8l-68.6-25.7c-27.4-10.3-58-7.5-83.1 7.6l-53.5 32.1c-15.2 9.1-20.1 28.7-11 43.9s28.7 20.1 43.9 11L230 187.3c8.4-5 18.6-5.9 27.7-2.5l35.7 13.4zm110 181.9c21.3-16.1 49.9-16.1 71.2 0 19 14.4 41.9 28.2 67.2 33.3 26.5 5.4 54.3 .8 80.7-19.1 10.6-8 12.7-23 4.7-33.6s-23-12.7-33.6-4.7c-14.9 11.2-28.6 13.1-42.3 10.3-14.9-3-30.9-11.9-47.8-24.6-38.4-29-90.5-29-129 0-24 18.1-40.7 26.3-54.5 26.3s-30.5-8.2-54.5-26.3c-38.4-29-90.5-29-129 0-21.6 16.3-41.3 25.8-58.9 25.7-9.6-.1-19.9-3-31.2-11.5-10.6-8-25.6-5.9-33.6 4.7S7 386.3 17.6 394.3c19.1 14.4 39.4 21 59.8 21.1 33.9 .2 64.3-17.4 88.1-35.3 21.3-16.1 49.9-16.1 71.2 0 24.2 18.3 52.3 35.9 83.4 35.9s59.1-17.7 83.4-35.9z"/></svg>
         </div>
+        <div class="svc-name">Swimming Pool</div>
+        
         <div class="svc-desc">25m heated Olympic pool. Adult lanes, aqua aerobics & kids sessions available.</div>
         <div class="svc-price">Pro+ plan only</div>
       </article>
@@ -768,6 +772,7 @@
             <option>Cardio Zone</option>
           </select>
           <div class="form-msg" id="daily-service-msg"></div>
+        </div>
 
         <div class="form-group">
           <label for="daily-plan">Select Plan</label>
@@ -829,3 +834,6 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+
+
