@@ -3,30 +3,15 @@
     RewriteEngine On
     RewriteBase /BeautyShop/backend/
 
-    # Remove .php extension from URLs
+    # Route all /api/* requests to api.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^api/(.*)$ api.php?endpoint=$1 [QSA,L]
+
+    # Remove .php extension from URLs for non-API files
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^([a-zA-Z0-9_-]+)/?$ $1.php [L]
-
-    # API Routing with clean URLs
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-
-    # POST /api/bookings -> process_booking.php
-    RewriteCond %{REQUEST_METHOD} POST
-    RewriteRule ^api/bookings/?$ process_booking.php [QSA,L]
-
-    # GET /api/bookings -> get_bookings.php
-    RewriteCond %{REQUEST_METHOD} GET
-    RewriteRule ^api/bookings/?$ get_bookings.php [QSA,L]
-
-    # POST /api/callback -> mpesa_callback.php
-    RewriteCond %{REQUEST_METHOD} POST
-    RewriteRule ^api/callback/?$ mpesa_callback.php [QSA,L]
-
-    # GET /api/demo -> demo.php
-    RewriteCond %{REQUEST_METHOD} GET
-    RewriteRule ^api/demo/?$ demo.php [QSA,L]
 
     # Prevent direct access to sensitive config files
     <FilesMatch "^(config|database)\.php$">
@@ -37,6 +22,6 @@
 # Disable directory listing
 Options -Indexes
 
-# Set PHP error reporting (if .php.ini not available)
+# Set PHP error reporting (if php.ini not available)
 php_flag display_errors on
 php_flag log_errors on
